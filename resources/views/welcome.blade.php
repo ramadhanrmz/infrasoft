@@ -9,34 +9,43 @@
 </head>
 <body class="bg-gray-50 text-gray-800">
 
-    <!-- Header -->
     <header class="bg-white shadow-md fixed top-0 left-0 w-full z-50">
-        <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
-            <h1 class="text-2xl font-bold text-blue-600">Infrasoft</h1>
-            <nav class="space-x-6 flex items-center">
-                <a href="#home" class="hover:text-blue-600">Beranda</a>
-                <a href="#services" class="hover:text-blue-600">Layanan</a>
-                <a href="#about" class="hover:text-blue-600">Tentang</a>
-                <a href="#contact" class="hover:text-blue-600">Kontak</a>
+    <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
+        
+        <!-- Logo -->
+        <h1 class="text-2xl font-bold text-blue-600">Infrasoft</h1>
 
-                <!-- Language Switcher -->
-                <div class="ml-4 flex space-x-2">
-                    <a href="{{ url('lang/id') }}" 
-                    class="px-2 py-1 border rounded text-sm {{ app()->getLocale() == 'id' ? 'bg-blue-600 text-white' : 'text-gray-600 hover:bg-gray-100' }}">
-                    ID
-                    </a>
-                    <a href="{{ url('lang/en') }}" 
-                    class="px-2 py-1 border rounded text-sm {{ app()->getLocale() == 'en' ? 'bg-blue-600 text-white' : 'text-gray-600 hover:bg-gray-100' }}">
-                    EN
-                    </a>
-                </div>               
+        <!-- Menu (desktop) -->
+        <nav class="hidden md:flex space-x-6 items-center">
+        <a href="#home" class="hover:text-blue-600">{{ __('messages.home') }}</a>
+        <a href="#services" class="hover:text-blue-600">{{ __('messages.services') }}</a>
+        <a href="#about" class="hover:text-blue-600">{{ __('messages.about') }}</a>
+        <a href="#contact" class="hover:text-blue-600">{{ __('messages.contact') }}</a>
+        </nav>
 
-            </nav>
-        </div>
+        <!-- Hamburger Button (mobile) -->
+        <button id="menu-toggle" class="md:hidden focus:outline-none">
+        <svg class="w-7 h-7 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+        </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu"
+        class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-white md:hidden">
+        <nav class="flex flex-col p-4 space-y-4">
+        <a href="#home" class="hover:text-blue-600">{{ __('messages.home') }}</a>
+        <a href="#services" class="hover:text-blue-600">{{ __('messages.services') }}</a>
+        <a href="#about" class="hover:text-blue-600">{{ __('messages.about') }}</a>
+        <a href="#contact" class="hover:text-blue-600">{{ __('messages.contact') }}</a>
+        </nav>
+    </div>
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="bg-blue-100 pt-32 pb-20">
+    <section id="home" class="bg-blue-100 pt-32 pb-20 min-h-screen flex items-center">
     <div class="container mx-auto flex flex-col-reverse md:flex-row items-center px-6 md:px-12 gap-10">
 
         <!-- Left Content -->
@@ -161,6 +170,21 @@
             <span class="text-white font-medium">Telegram</span>
         </a>
     </div>
+
+<script>
+  const toggleBtn = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  toggleBtn.addEventListener('click', () => {
+    if (mobileMenu.classList.contains('max-h-0')) {
+      mobileMenu.classList.remove('max-h-0');
+      mobileMenu.classList.add('max-h-96'); // tinggi menu pas dibuka
+    } else {
+      mobileMenu.classList.add('max-h-0');
+      mobileMenu.classList.remove('max-h-96');
+    }
+  });
+</script>
 
 </body> 
 </html>

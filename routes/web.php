@@ -10,11 +10,3 @@ Route::get('/', function () {
 });
 
 Route::post('/contact', [ContactController::class, 'send'])->name('contact.send');
-
-Route::get('lang/{locale}', function ($locale) {
-    if (in_array($locale, ['en', 'id'])) {
-        session(['locale' => $locale]);
-        App::setLocale($locale);
-    }
-    return redirect()->back();
-});
