@@ -109,17 +109,28 @@
 
     <!-- Contact -->
     <section id="contact" class="py-20 max-w-4xl mx-auto px-6">
-    <h3 class="text-3xl font-bold text-center mb-8">Hubungi Kami</h3>
-    
-    <!-- Form Email -->
-    <form action="#" method="POST" class="bg-white shadow-lg rounded-xl p-8 space-y-6">
-        <input type="text" placeholder="Nama Anda" class="w-full p-3 border rounded-lg focus:ring focus:ring-blue-300" required>
-        <input type="email" placeholder="Email Anda" class="w-full p-3 border rounded-lg focus:ring focus:ring-blue-300" required>
-        <textarea placeholder="Pesan Anda" class="w-full p-3 border rounded-lg focus:ring focus:ring-blue-300" rows="5" required></textarea>
-        <button type="submit" class="w-full py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700">
-            Kirim Pesan
-        </button>
-    </form>
+        <h3 class="text-3xl font-bold text-center mb-8">Hubungi Kami</h3>
+        
+        @if(session('success'))
+            <div class="mb-6 p-4 bg-green-100 text-green-800 rounded-lg text-center">
+                {{ session('success') }}
+            </div>
+        @endif
+
+        <!-- Form Email -->
+        <form action="{{ route('contact.send') }}" method="POST" class="bg-white shadow-lg rounded-xl p-8 space-y-6">
+            @csrf
+            <input type="text" name="name" placeholder="Nama Anda" 
+                class="w-full p-3 border rounded-lg focus:ring focus:ring-blue-300" required>
+            <input type="email" name="email" placeholder="Email Anda" 
+                class="w-full p-3 border rounded-lg focus:ring focus:ring-blue-300" required>
+            <textarea name="message" placeholder="Pesan Anda" 
+                    class="w-full p-3 border rounded-lg focus:ring focus:ring-blue-300" rows="5" required></textarea>
+            <button type="submit" 
+                    class="w-full py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700">
+                Kirim Pesan
+            </button>
+        </form>
     </section>
 
     <!-- Footer --> 
@@ -129,7 +140,7 @@
 
     <!-- Floating Contact Buttons -->
     
-     <div class="fixed bottom-6 right-6 flex flex-col gap-3 z-50 md:gap-4">
+    <div class="fixed bottom-6 right-6 flex flex-col gap-3 z-50 md:gap-4">
         <!-- WhatsApp -->
         <!--<a href="https://wa.me/6281234567890?text=Halo%20Infrasoft,%20saya%20mau%20konsultasi" 
         target="_blank" rel="noopener noreferrer"
@@ -142,7 +153,7 @@
         </a>-->
     
         <!-- Telegram -->
-        <a href="https://t.me/kokoalii" target="_blank" rel="noopener noreferrer"
+        <a href="https://t.me/robirama93" target="_blank" rel="noopener noreferrer"
         class="flex items-center gap-2 px-4 py-3 rounded-full bg-sky-500 shadow-lg hover:bg-sky-600 transition animate-bounce md:animate-none">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" viewBox="0 0 240 240" aria-hidden="true">
                 <path d="M179 73l-24 113c-2 9-7 12-15 7l-42-31-20 19c-2 2-4 3-8 3l3-45 82-74c4-3-1-5-6-2l-101 64-43-13c-9-3-9-9 2-13l168-65c8-3 15 2 12 14z" fill="white"/>
