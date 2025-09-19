@@ -128,9 +128,10 @@
     </footer>
 
     <!-- Floating Contact Buttons -->
-    <div class="fixed bottom-6 right-6 flex flex-col gap-3 z-50 md:gap-4">
+    
+    <!-- <div class="fixed bottom-6 right-6 flex flex-col gap-3 z-50 md:gap-4">-->
         <!-- WhatsApp -->
-        <a href="https://wa.me/6281234567890?text=Halo%20Infrasoft,%20saya%20mau%20konsultasi" 
+        <!--<a href="https://wa.me/6281234567890?text=Halo%20Infrasoft,%20saya%20mau%20konsultasi" 
         target="_blank" rel="noopener noreferrer"
         class="flex items-center gap-2 px-4 py-3 rounded-full bg-green-500 shadow-lg hover:bg-green-600 transition animate-bounce md:animate-none">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" viewBox="0 0 24 24" aria-hidden="true">
@@ -138,8 +139,8 @@
                 <path d="M17.34 14.1c-.29-.15-1.7-.84-1.96-.94-.26-.1-.45-.15-.64.15-.19.29-.74.94-.91 1.13-.17.19-.34.21-.63.07-.29-.15-1.23-.45-2.34-1.45-.87-.77-1.45-1.72-1.62-2.01-.17-.29-.02-.45.13-.6.14-.14.31-.36.46-.54.15-.19.2-.32.3-.53.1-.21.05-.39-.02-.54-.07-.15-.64-1.55-.88-2.12-.23-.56-.47-.48-.64-.49l-.54-.01c-.18 0-.47.07-.72.34-.25.27-.95.93-.95 2.27s.97 2.64 1.11 2.83c.14.19 1.9 2.9 4.6 3.96 1.07.46 1.9.73 2.55.93.99.29 1.89.25 2.6.15.79-.11 1.7-.69 1.94-1.36.24-.67.24-1.25.17-1.37-.06-.12-.25-.19-.54-.34z" fill="white"/>
             </svg>
             <span class="text-white font-medium">WhatsApp</span>
-        </a>
-
+        </a>-->
+    
         <!-- Telegram -->
         <a href="https://t.me/usernametelegram" target="_blank" rel="noopener noreferrer"
         class="flex items-center gap-2 px-4 py-3 rounded-full bg-sky-500 shadow-lg hover:bg-sky-600 transition hidden md:flex">
