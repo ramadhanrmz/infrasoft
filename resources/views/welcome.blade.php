@@ -129,7 +129,7 @@
 
     <!-- Floating Contact Buttons -->
     
-    <!-- <div class="fixed bottom-6 right-6 flex flex-col gap-3 z-50 md:gap-4">-->
+     <div class="fixed bottom-6 right-6 flex flex-col gap-3 z-50 md:gap-4">
         <!-- WhatsApp -->
         <!--<a href="https://wa.me/6281234567890?text=Halo%20Infrasoft,%20saya%20mau%20konsultasi" 
         target="_blank" rel="noopener noreferrer"
@@ -142,8 +142,8 @@
         </a>-->
     
         <!-- Telegram -->
-        <a href="https://t.me/usernametelegram" target="_blank" rel="noopener noreferrer"
-        class="flex items-center gap-2 px-4 py-3 rounded-full bg-sky-500 shadow-lg hover:bg-sky-600 transition hidden md:flex">
+        <a href="https://t.me/kokoalii" target="_blank" rel="noopener noreferrer"
+        class="flex items-center gap-2 px-4 py-3 rounded-full bg-sky-500 shadow-lg hover:bg-sky-600 transition animate-bounce md:animate-none">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" viewBox="0 0 240 240" aria-hidden="true">
                 <path d="M179 73l-24 113c-2 9-7 12-15 7l-42-31-20 19c-2 2-4 3-8 3l3-45 82-74c4-3-1-5-6-2l-101 64-43-13c-9-3-9-9 2-13l168-65c8-3 15 2 12 14z" fill="white"/>
             </svg>
